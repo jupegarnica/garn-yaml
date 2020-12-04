@@ -1,0 +1,16 @@
+allow:
+  - env
+  - read
+  - run
+
+scripts:
+  test: DENO_ENV=development deno test --allow-read --allow-env
+  format: deno fmt *.ts
+  dev:
+    desc: watch mode
+    cmd: deno run runtest.ts
+    env:
+      DENO_ENV: development
+      TEST: hola mundo
+    watch: true
+    unstable: true
