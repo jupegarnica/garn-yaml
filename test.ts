@@ -4,7 +4,7 @@ import { assertEquals } from 'https://deno.land/std@0.79.0/testing/asserts.ts';
 
 
 Deno.test('Must interpolate one environment variable',  () => {
-  const interpolated =  interpolateEnv('${{DENO_ENV}}');
+  const interpolated =  interpolateEnv('${{ DENO_ENV }}');
   assertEquals(interpolated, 'development');
 });
 

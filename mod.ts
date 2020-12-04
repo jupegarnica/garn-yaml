@@ -6,7 +6,7 @@ export function interpolateEnv(text:string):string {
     let output = text;
     const matches = text.match(regex);
     matches?.forEach(match => {
-        const variable = match.replace( /(\$\{\{)|(\}\})/g, '');
+        const variable = match.replace( /(\$\{\{)|(\}\})|(\s)/g, '');
         output = output.replaceAll(match, Deno.env.get(variable) || match)
     })
 

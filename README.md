@@ -10,7 +10,7 @@ DENO_ENV: ${{DENO_ENV}}
 
 ```ts
 // index.ts
-import { loadYaml } from 'https://deno.land/x/garn_yaml@v0.1.2/mod.ts';
+import { loadYaml } from 'https://deno.land/x/garn_yaml@v0.1.4/mod.ts';
 import { assertEquals } from 'https://deno.land/std@0.79.0/testing/asserts.ts';
 
 const yamlObject = await loadYaml('./test.yml');
