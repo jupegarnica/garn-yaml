@@ -4,7 +4,7 @@
 <h2>Example</h2>
 
 ```ts
-import { loadYaml } from 'https://deno.land/x/garn_yaml@v0.1.0/mod.ts;
+import { loadYaml } from 'https://deno.land/x/garn_yaml@v0.1.1/mod.ts';
 import { assertEquals } from 'https://deno.land/std@0.79.0/testing/asserts.ts';
 
 const yamlObject = await loadYaml('./test.yml');
