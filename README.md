@@ -19,5 +19,5 @@ assertEquals(yamlObject.DENO_ENV, 'development');
 ```
 
 ```bash
-deno run index.ts --allow-read --allow-env
+DENO_ENV=development deno run index.ts --allow-read --allow-env
 ```
