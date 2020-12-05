@@ -1,10 +1,11 @@
 allow:
   - env
   - read
+  - write
   - run
 
 scripts:
-  test: DENO_ENV=development deno test --allow-read --allow-env
+  test: DENO_ENV=development deno test --allow-read --allow-write --allow-env
   format: deno fmt *.ts
   dev:
     desc: watch mode
