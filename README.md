@@ -1,23 +1,34 @@
-<h1>gar-yaml:  <i>load yaml interpolating env variables</i> </h1>
-
+<h1>gar-yaml:  <i>read or write yaml interpolating env variables</i> </h1>
 
 <h2>Usage</h2>
 
 ```yaml
-# test.yml
+# read.yml
 DENO_ENV: ${{DENO_ENV}}
 ```
 
 ```ts
-// index.ts
-import { loadYaml } from 'https://deno.land/x/garn_yaml@v0.1.4/mod.ts';
+// read.ts
+import { readYaml } from 'https://deno.land/x/garn_yaml@0.2.1/mod.ts';
 import { assertEquals } from 'https://deno.land/std@0.79.0/testing/asserts.ts';
 
-const yamlObject = await loadYaml('./test.yml');
+const yamlObject = await readYaml('./read.yml');
 assertEquals(typeof yamlObject, 'object');
 assertEquals(yamlObject.DENO_ENV, 'development');
 ```
 
 ```bash
-DENO_ENV=development deno run index.ts --allow-read --allow-env
+DENO_ENV=development deno run read.ts --allow-read --allow-env
+```
+
+```ts
+// write.ts
+import { writeYaml } from 'https://deno.land/x/garn_yaml@0.2.1/mod.ts';
+
+const yamlText = await writeYaml('./write.yml', { a: 1 }); // a: 1
+```
+
+```yaml
+# write.yml
+a: 1
 ```
