@@ -28,4 +28,4 @@ jobs:
           deno-version: v1.5.4
 
       - name: Run Tests
-        run: DENO_ENV=development deno test --allow-read --allow-env
+        run: DENO_ENV=development deno test --allow-read --allow-env --allow-write
