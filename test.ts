@@ -1,5 +1,5 @@
 import { readYaml, interpolateEnv, writeYaml } from './mod.ts';
-import { assertEquals } from 'https://deno.land/std@0.79.0/testing/asserts.ts';
+import { assertEquals } from 'https://deno.land/std@0.90.0/testing/asserts.ts';
 
 
 

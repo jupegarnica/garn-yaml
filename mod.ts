@@ -1,4 +1,4 @@
-import { parse , stringify } from "https://deno.land/std@0.79.0/encoding/yaml.ts";
+import { parse , stringify } from "https://deno.land/std@0.90.0/encoding/yaml.ts";
 
 
 export function interpolateEnv(text:string):string {

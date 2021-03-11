@@ -14,7 +14,7 @@ DENO_ENV: ${{DENO_ENV}}
 ```ts
 // read.ts
 import { readYaml } from 'https://deno.land/x/garn_yaml@0.2.1/mod.ts';
-import { assertEquals } from 'https://deno.land/std@0.79.0/testing/asserts.ts';
+import { assertEquals } from 'https://deno.land/std@0.90.0/testing/asserts.ts';
 
 const yamlObject = await readYaml('./read.yml');
 assertEquals(typeof yamlObject, 'object');
